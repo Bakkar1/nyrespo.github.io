@@ -1,0 +1,389 @@
+/*start our framework*/
+.container {
+    margin: auto;
+}
+.text-center{
+    text-align: center;
+}
+.upper{
+    text-transform: uppercase;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+.overly{
+    background-color: var(--overly-color ,#2d3338);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.hidden{
+    display: none;
+}
+i *{
+    line-height: 0;
+}
+button:focus,
+input:focus{
+    outline: none;
+}
+:root{
+    --main-color: #f7600e;
+    --overly-color : rgba(45, 51, 56, .9);
+    --default-color: #FFF;
+    --border-color: #909090;
+    --text-color: #E2E2E2;
+    --text-2-color: #6c7279;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:focus{
+    outline: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.h1{
+    font-size: 2em;
+}
+.h2{
+    font-size: 1.5em;
+}
+.visibale-xs, /*hadak elemnt ghaykon mkhfi fga3 lmedia ila l media li khtaritha lih ghayban fiha*/
+.visibale-sm,
+.visibale-md,
+.visibale-lg
+{
+    display: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.specOverly{
+    --spec-color : rgba(247, 96, 14, .7);
+    padding: 5px;
+    border-radius: 15px;
+    background-color: var(--spec-color ,orange);
+    box-shadow: 0 0 0 600px var(--spec-color ,orange);
+    overflow: hidden;
+
+}
+/*end our framewrok*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*start content*/
+
+/*start header*/
+/*end header*/
+header{
+    height: 100vh;
+    background-color: aqua;
+    background-image:url("../img/img3.jpeg");
+    background-color: var(--overly-color ,#DDD);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    color: var(--default-color ,white);
+    overflow: auto;
+    position: relative;
+}
+header nav{
+    margin-top: 20px;
+}
+header nav h3
+{
+    float: left;
+    text-transform: capitalize;
+    font-size: 24px;
+    margin-left: 20px;
+    font-weight: bold;
+
+}
+header nav h3 span::before
+{
+    content: "A";
+    text-transform: uppercase;
+    color: var(--main-color ,orange);
+}
+header nav h3 span,
+header section h1 span
+{
+    color:var(--main-color ,orange);
+}
+header nav ol,
+header nav ol li ul{
+    list-style: none;
+} 
+header nav ol li ul  li a
+{
+    text-decoration: none;
+    color: var(--default-color ,#FFF);
+    text-transform: capitalize;
+}
+header nav ol li ul  li:hover a
+{
+    color:var(--main-color ,orange)
+}
+/*section*/
+header section
+{
+    padding-top: 50px;
+}
+header section h1
+{
+    margin:0;
+    font-size:50px;
+    font-weight: 800;
+
+}
+header section p
+{
+    margin:5px 0 40px;
+    line-height: 1.9;
+    font-size: 20px;
+    color: var(--text-color ,#FFF);
+}
+header section div button
+{
+    background-color:transparent;
+    padding: 10px 20px;
+    margin:0 8px;
+    width:150px;
+    font-size: 13px;
+    border: 1px solid var(--border-color ,black);
+    border-radius: 10px;
+    color:var(--default-color ,white);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+header section div button:focus
+{
+    outline: none;
+}
+header section div button:hover
+{
+    background-color: var(--main-color ,orange);
+    border:1px solid var(--main-color ,orange);
+}
+header div > span
+{
+    position: absolute;
+    text-align: center;
+}
+header div > span i
+{
+    font-size: 30px;
+    border: 2px solid var(--text-color ,#FFF);
+    padding: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px !important;
+    transition:all .5s ease-in-out;
+    cursor: pointer;
+    transform: rotate(-180deg);
+    box-sizing: content-box;
+}
+header div > span i:hover
+{
+    border: 2px solid var(--main-color ,orange);
+    color:var(--main-color ,orange);
+    transform: rotate(0deg);
+}
+/*start header media*/
+@media ( max-width : 767px) , ( min-width : 767px) and (max-width : 991px){
+    header{
+    }
+    header nav h3{
+        margin-top: 5px;
+        display: block;
+    }
+    header nav ol{
+        width: 100%;
+    }
+    header nav ol{
+        text-align: center;
+        
+    }
+    header nav ol li ul{
+        overflow-wrap: normal;
+        width: 50%;
+        margin: auto;
+    }
+    header nav ol li ul li{
+        display: block;
+        border-radius: 10px;
+        border: 1px solid var(--overly-color);
+        padding: 5px;
+        margin-top: 10px;
+        font-size: 25px;
+        text-align: center;
+        transition: all .5s ease-in-out;
+    }
+    header nav ol li ul  li:hover{
+        background-color: ;
+        color: var(--main-color ,orange) !important;
+        border: 1px solid rgba(247, 96, 14, .7);
+        transform: scale(1.1);
+    }
+    header div section div button{
+        display: block;
+        margin: 10px auto;
+    }
+}
+@media ( min-width : 767px) and (max-width : 991px){
+    header div section div button{
+        display: inline-block;
+        margin: auto;
+    }
+    header div section div button:first-of-type{
+        margin-right: 10px;
+    }
+    header div > span
+    {
+        left: 45%;
+        bottom: 10%;
+    }
+}
+@media (min-width : 992px){
+    header nav ol li ul li{
+        display: inline-block;
+    }
+    header nav ol li ul li a{
+        margin: 10px 20px 0 0;
+    }
+    header div > span
+    {
+        left: 47%;
+        bottom: 20%;
+    }
+/*end content*/
+
+
+
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*start footer*/
+footer{
+    background-color: #3b434c;
+    color: var(--default-color , white);
+    overflow: auto;
+    padding: 30px 0;
+    text-transform: uppercase;
+    overflow: auto;
+}
+footer span.copyRight
+{
+    float: left;
+    width: 45%;
+}
+
+footer section
+{
+    float: left;
+    width: 10%;
+    text-align: center;
+}
+footer section i
+{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+footer section i::before
+{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    transition: all .5s ease-in-out;
+}
+footer section i:hover
+{
+    border: 1px solid var(--main-color ,orange);
+}
+footer section i:hover::before
+{
+    color:var(--main-color ,orange);
+    top: 10%;
+}
+footer span.desing
+{
+    float: right;
+    text-align: right;
+    width: 45%;
+}
+/*end footer*/
+/*global media*/
+@media ( max-width : 767px) /*hadchi ghaytab9 3la ay chacha l width dyalha makyfot 767px*/
+{
+    .visibale-xs
+    {
+        display: block !important;
+    }
+    .hidden-xs /*hadak elemnt ghaytkhfa fhad l media wyban fl media lokhrin*/
+    {
+        display: none !important;
+    }
+}
+@media (min-width : 768px)
+{
+    .container
+    {
+        width: 780px;
+    }
+    .visibale-sm
+    {
+        display: block !important;
+    }
+    .hidden-sm
+    {
+        display: none !important;
+    }
+}
+@media (min-width : 992px)
+{
+    .container
+    {
+        width: 1000px;
+    }
+    .visibale-md
+    {
+        display: block !important;
+    }
+    .hidden-md
+    {
+        display: none !important;
+    }
+}
+
+@media (min-width : 1200px)
+{
+    .container
+    {
+        width: 1200px;
+    }
+    .visibale-lg
+    {
+        display: block !important;
+    }
+    .hidden-lg
+    {
+        display: none !important;
+    }
+}
