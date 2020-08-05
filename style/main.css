@@ -86,7 +86,6 @@ a{
 /*start header*/
 /*end header*/
 header{
-    height: 100vh;
     background-color: aqua;
     background-image:url("../img/img3.jpeg");
     background-color: var(--overly-color ,#DDD);
@@ -94,8 +93,8 @@ header{
     background-size: cover;
     background-position: center;
     color: var(--default-color ,white);
-    overflow: auto;
-    position: relative;
+    overflow: hidden;
+    position: relative; 
 }
 header nav{
     margin-top: 20px;
@@ -232,23 +231,33 @@ header div > span i:hover
     }
     header nav ol li.mijn-bar ul{
         left: 25%;
+        box-shadow: 5px 5px 51px 5px var(--main-color);
+        border-radius: 10px;
+        background-color: rgba(45, 51, 56, .8);
+        z-index: 3;
     }
     header nav ol li ul li{
         border-radius: 10px;
-        border: 1px solid var(--overly-color);
+        border: 1px solid var(--default-color);
         padding: 5px;
         margin-top: 10px;
         font-size: 25px;
         text-align: center;
-        z-index: 1;
-    }
-    header nav ol li.mijn-bar ul li{
-        
+        width: 70%;
+        margin: 10px auto;
+        transition: all .5s ease-in-out;
     }
     header nav ol li ul  li:hover{
         color: var(--main-color ,orange) !important;
         border: 1px solid rgba(247, 96, 14, .7);
         transform: scale(1.1);
+    }
+    header div section{
+        transition: all .5s ease-in-out;
+    }
+    header div section.mijnS{
+        filter: blur(1px);
+        z-index: 1;
     }
     header div section div button{
         display: block;
@@ -256,6 +265,9 @@ header div > span i:hover
     }
 }
 @media ( min-width : 767px) and (max-width : 991px){
+    header{
+        height: 100vh;
+    }
     header nav ol li span{
         display: none;
     }
@@ -273,6 +285,9 @@ header div > span i:hover
     }
 }
 @media (min-width : 992px){
+    header{
+        height: 100vh;
+    }
     header nav ol li span{
         display: none;
     }
