@@ -200,8 +200,6 @@ header div > span i:hover
 }
 /*start header media*/
 @media ( max-width : 767px) , ( min-width : 767px) and (max-width : 991px){
-    header{
-    }
     header nav{
         position: relative;
     }
@@ -222,7 +220,7 @@ header div > span i:hover
     }
     header nav ol li ul{
         overflow-wrap: normal;
-        width: 50%;
+        width: 60%;
         margin: auto;
         position: absolute;
         top: 0;
@@ -267,9 +265,6 @@ header div > span i:hover
 @media ( min-width : 767px) and (max-width : 991px){
     header{
         height: 100vh;
-    }
-    header nav ol li span{
-        display: none;
     }
     header div section div button{
         display: inline-block;
