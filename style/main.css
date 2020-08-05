@@ -225,7 +225,7 @@ header div > span i:hover
         position: absolute;
         top: 0;
         left: -100%;
-        transition: all 1.5s ease-in-out;
+        transition: all 1s ease-in-out;
     }
     header nav ol li.mijn-bar ul{
         left: 25%;
@@ -257,9 +257,14 @@ header div > span i:hover
         filter: blur(1px);
         z-index: 1;
     }
+    header div section.mijnS div button{
+    }
     header div section div button{
         display: block;
         margin: 10px auto;
+    }
+    header div section div button:active{
+        background-color: green;
     }
 }
 @media ( min-width : 767px) and (max-width : 991px){
