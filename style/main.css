@@ -102,7 +102,6 @@ header nav{
 }
 header nav h3
 {
-    float: left;
     text-transform: capitalize;
     font-size: 24px;
     margin-left: 20px;
@@ -204,34 +203,49 @@ header div > span i:hover
 @media ( max-width : 767px) , ( min-width : 767px) and (max-width : 991px){
     header{
     }
+    header nav{
+        position: relative;
+    }
     header nav h3{
         margin-top: 5px;
         display: block;
     }
     header nav ol{
         width: 100%;
+        overflow: hidden;
     }
-    header nav ol{
-        text-align: center;
-        
+    header nav ol li span{
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 30px;
     }
     header nav ol li ul{
         overflow-wrap: normal;
         width: 50%;
         margin: auto;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        transition: all 1.5s ease-in-out;
+    }
+    header nav ol li.mijn-bar ul{
+        left: 25%;
     }
     header nav ol li ul li{
-        display: block;
         border-radius: 10px;
         border: 1px solid var(--overly-color);
         padding: 5px;
         margin-top: 10px;
         font-size: 25px;
         text-align: center;
-        transition: all .5s ease-in-out;
+        z-index: 1;
+    }
+    header nav ol li.mijn-bar ul li{
+        
     }
     header nav ol li ul  li:hover{
-        background-color: ;
         color: var(--main-color ,orange) !important;
         border: 1px solid rgba(247, 96, 14, .7);
         transform: scale(1.1);
@@ -242,6 +256,9 @@ header div > span i:hover
     }
 }
 @media ( min-width : 767px) and (max-width : 991px){
+    header nav ol li span{
+        display: none;
+    }
     header div section div button{
         display: inline-block;
         margin: auto;
@@ -256,6 +273,9 @@ header div > span i:hover
     }
 }
 @media (min-width : 992px){
+    header nav ol li span{
+        display: none;
+    }
     header nav ol li ul li{
         display: inline-block;
     }
